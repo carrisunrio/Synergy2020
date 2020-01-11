@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Synergy</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <style>
+    body{
+        background-color: black;
+    }
+    h1{
+        color:whitesmoke;
+        font-weight: bold;
+        margin: 5vw;
+        text-align:center;
+        font-size: 50px;
+    }
+    hr{
+        color:white;
+    }
+    .content {
+        width: 500px;
+        height: 400px;
+        background-color:whitesmoke;
+        position:absolute; /*it can be fixed too*/
+        left:0; right:0;
+        top:105px;
+        bottom:55px;
+        margin:auto;
+        max-width:100%;
+        max-height:100%;
+        border-radius: 12%;
+        padding:1vw;
+    }
+    h6{
+        color:whitesmoke;
+        padding-left: 1%;
+        font-size: 1rem;
+    }
+    
+    .btn{
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+}
+.btn:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+.btn i{
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.2s linear;
+}
+.btn:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.middle{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+@keyframes aaa {
+  0%{
+    left: -110%;
+    top: 90%;
+  }50%{
+    left: 10%;
+    top: -30%;
+  }100%{
+    top: -10%;
+    left: -10%;
+  }
+}
+.bottom-container{
+  top: 100%;
+  margin: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+/* #map { 
+        width: 100%; 
+        height: 400px; 
+        background-color: grey; 
+      }  */
+      .map-view{
+        padding-top: 35vw;
+        padding-left: 12vw;
+        padding-bottom: 12vw;
+      }
+      
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <hr>
+    <div class="content">
+        <div class="middle">
+            <a class="btn" href="https://www.facebook.com/igdtuwsportsclub/?epa=SEARCH_BOX">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="btn" href="#">  <!--igdtuw website link can be put here-->
+              <i class="fab fa-google"></i>
+            </a>
+            <a class="btn" href="https://www.instagram.com/ignite_igdtuw/">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+    </div>
+   
+    <!-- <p>My Google Maps Demo</p> 
+    <div id="map"></div> 
+    <script> 
+      function initMap() { 
+        var test= {lat: -25.363, lng: 131.044}; 
+        var map = new google.maps.Map(document.getElementById('map'), { 
+          zoom: 4, 
+          center: test 
+        }); 
+        var marker = new google.maps.Marker({ 
+          position: test, 
+          map: map 
+        }); 
+      } 
+    </script> 
+    <script async defer 
+    src= 
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyCCQ58TaWcBuSTDo7qRON9tLu7sA3XU5Sk&callback=initMap"> 
+    </script>  -->
+
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCCQ58TaWcBuSTDo7qRON9tLu7sA3XU5Sk&callback=initMap'>
+    </script>
+<div class="map-view">
+    <div style='width:450px;height:350px;'>
+       <div id='gmap_canvas' style='width:450px;height:350px;'>
+       </div>
+    </div>
+</div>
+    <script type='text/javascript'>
+    function init_map(){
+        var myOptions = {
+            zoom:12,
+            center:new google.maps.LatLng(28.666450, 77.231390),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+    marker = new google.maps.Marker(
+        {map: map,position: new google.maps.LatLng(28.666450, 77.231390)}
+        );
+    infowindow = new google.maps.InfoWindow(
+        {content:'<strong>Indira Gandhi Delhi Technical University for Women</strong><br> James Church, New Church Rd, Opp. St, Kashmere Gate, New Delhi, Delhi 110006<br>'});
+    google.maps.event.addListener(marker, 'click',
+     function(){infowindow.open(map,marker);
+     });
+    infowindow.open(map,marker);
+    }
+    google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+
+
+
+<div class="bottom-container">   
+    <footer>
+        <hr>
+    <h6>&copy;Copyright 2020, All Rights Reserved with IGDTUW</h6>
+    </footer>
+</div>
+</body>
+</html>
