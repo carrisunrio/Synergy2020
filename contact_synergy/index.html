@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Synergy</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <style>
+    body{
+        background-color: black;
+    }
+    h1{
+        color:whitesmoke;
+        font-weight: bold;
+        margin: 5vw;
+        text-align:center;
+        font-size: 50px;
+    }
+    hr{
+        color:white;
+    }
+    .content {
+       
+        position:absolute; /*it can be fixed too*/
+        left:0;
+        top:105px;
+        bottom:55px;
+        margin:auto;
+        max-width:100%;
+        max-height:100%;
+        border-radius: 12%;
+        padding:1vw;
+    }
+    h6{
+        color:whitesmoke;
+        padding-left: 1%;
+        font-size: 1rem;
+    }
+    
+  .btn-a{
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+.btn-a:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn-a::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn-a:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+.btn-a i{
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.2s linear;
+}
+.btn-a:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn-b{
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+.btn-b:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn-b::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: green;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn-b:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+.btn-b i{
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.2s linear;
+}
+.btn-b:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn-c{
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+.btn-c:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn-c::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: palevioletred;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn-c:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+.btn-c i{
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.2s linear;
+}
+.btn-c:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.middle{
+  position: inherit;
+  top: 70%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+@keyframes aaa {
+  0%{
+    left: -110%;
+    top: 90%;
+  }50%{
+    left: 10%;
+    top: -30%;
+  }100%{
+    top: -10%;
+    left: -10%;
+  }
+}
+
+.map-view{
+    display: block;
+    width: 767px;
+    height: 530px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.map-view-jln{
+    width: 767px;
+    height: 530px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+
+@media screen and (max-width: 16vw) {
+    h1{
+      font-size: 15vw;
+    }
+  }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    
+        <div class="middle">
+            <a class="btn-a"  href="https://www.facebook.com/igdtuwsportsclub/?epa=SEARCH_BOX">
+              <i class="fab fa-facebook-f" ></i>
+            </a>
+            <a class="btn-b"  href="synergy.igdtuw@gmail.com"> 
+              <i class="fab fa-google"></i>
+            </a>
+            <a class="btn-c" href="https://www.instagram.com/ignite_igdtuw/">
+              <i class="fab fa-instagram" ></i>
+            </a>
+          </div>
+   
+    <iframe class="map-view" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.814936833522!2d77.23020441508335!3d28.665259382404937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1578902090000!5m2!1sen!2sin" 
+    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+     
+     <iframe class="map-view-jln" src="https://www.google.com/maps/d/embed?mid=1l8rEcFJvqNq2HJPgu7SPB2BAo8I" ></iframe>
+    <br>
+    <br>
+    <footer style="color: ghostwhite;text-align: center;">
+      <img src="C:\Users\User\Documents\html\contact_synergy\call3.png" style="width: 50px;">
+      <img src="C:\Users\User\Documents\html\contact_synergy\whatsapp_fin.png" style="width: 50px;">
+      <h4>TANIYA - 8920342101</h4>
+      <h4>AYUSHI - 9784630097</h4>
+      <h4>ANJALI - 9958246433</h4>
+      <h4>HARIPRIYA - 9711129631</h4>
+      <p>Posted by: Someone</p>
+      <p>Contact information: <a href="mailto:someone@example.com">
+      someone@example.com</a>.</p>
+    </footer>
+
+</body>
+</html>
